@@ -59,6 +59,11 @@
   background-color: #322b3a;
   color: white;
   transition: background-color 0.7s ease;
+  cursor: pointer;
+}
+
+#new-quote:hover, #tweet-quote:hover {
+  background-color: #29222c !important;
 }
 
 span {
