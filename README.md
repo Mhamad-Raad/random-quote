@@ -8,7 +8,7 @@ this wesite generates random quotes :).
 - React.js
 
 ### Deployment
-[Random-Quotes]([url](https://grand-clafoutis-fe002e.netlify.app/))
+[Random-Quotes](https://grand-clafoutis-fe002e.netlify.app/)
 
 👤 **Author1**
 
