@@ -1,7 +1,6 @@
 .quote-content {
   display: flex;
   flex-direction: column;
-
 }
 
 .first-row {
@@ -20,6 +19,9 @@
   font-size: 1.5rem;
   margin: 0;
   font-weight: bolder;
+  opacity: 0;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
 }
 
 #author {
@@ -27,6 +29,9 @@
   color: #322b3a;
   font-size: 1rem;
   font-weight: 600;
+  opacity: 0;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
 }
 
 .second-row {
@@ -44,6 +49,7 @@
   border: none;
   color: white;
   background-color: #322b3a;
+  transition: background-color 0.7s ease;
 }
 
 #new-quote {
@@ -52,9 +58,12 @@
   border: none;
   background-color: #322b3a;
   color: white;
+  transition: background-color 0.7s ease;
 }
 
 span {
   color: #322b3a;
   font-size: 20px;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
 }

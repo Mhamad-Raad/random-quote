@@ -6,4 +6,5 @@
   padding: 20px;
   width: 40%;
   box-sizing: border-box;
+  transition: opacity 0.7s ease;
 }
