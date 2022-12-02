@@ -1,0 +1,9 @@
+#quote-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(248, 248, 248, 0.2);
+  max-width: 600px;
+  padding: 20px;
+  width: 40%;
+  box-sizing: border-box;
+}

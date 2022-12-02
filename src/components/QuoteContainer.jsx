@@ -1,5 +1,10 @@
-export default function QuoteContainer() {
+import QuoteContent from './QuoteContent'
+import './QuoteContainer.css'
+
+export default function QuoteContainer(props) {
   return (
-    <div id='quote-box'>QuoteContainer</div>
+    <div id='quote-box'>
+      <QuoteContent quote={props.quote.text} author={props.quote.author} />
+    </div>
   )
 }
