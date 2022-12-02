@@ -6,4 +6,5 @@
   width: 100%;
   height: 100vh;
   background-color: #322b3a;
+  transition: background-color 0.5s ease;
 }

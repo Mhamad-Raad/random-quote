@@ -2,7 +2,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
 import "./QuoteContent.css";
 
-export default function QuoteContent({ quote, author }) {
+export default function QuoteContent({ quote, author, onChangeQuote }) {
   return (
     <div className="quote-content">
       <div className="first-row">
@@ -19,7 +19,9 @@ export default function QuoteContent({ quote, author }) {
             <AiOutlineTwitter />
           </a>
         </div>
-        <button id="new-quote">New Quote</button>
+        <button id="new-quote" onClick={onChangeQuote}>
+          New Quote
+        </button>
       </div>
     </div>
   );
