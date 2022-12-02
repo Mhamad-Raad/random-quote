@@ -14,12 +14,16 @@ export default function QuoteContent({ quote, author, onChangeQuote, color }) {
   }
 
   const handleClick = () => {
-    onChangeQuote();
     setNewQuote(true);
+    setTimeout(() => {
+      onChangeQuote();
+    }, 100);
     setTimeout(() => {
       setNewQuote(false);
     }, 1000);
   };
+
+  console.log(newQuote)
 
   return (
     <div className="quote-content">
@@ -32,13 +36,13 @@ export default function QuoteContent({ quote, author, onChangeQuote, color }) {
         </p>
       </div>
       <p id="author" style={{ color: `${color}`, opacity: `${opacity}` }}>
-        - {author}
+        - {author === null ? "Unknown" : author}
       </p>
 
       <div className="second-row">
         <div className="social-media">
           <a
-            href="twitter.com/intent/tweet"
+            href="https://twitter.com/intent/tweet"
             id="tweet-quote"
             style={{ background: `${color}` }}
           >
@@ -49,6 +53,7 @@ export default function QuoteContent({ quote, author, onChangeQuote, color }) {
           id="new-quote"
           onClick={handleClick}
           style={{ background: `${color}` }}
+          disabled={newQuote}
         >
           New Quote
         </button>

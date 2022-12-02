@@ -2,6 +2,7 @@ import QuoteContent from "./QuoteContent";
 import "./QuoteContainer.css";
 
 export default function QuoteContainer(props) {
+  
   return (
     <div id="quote-box">
       <QuoteContent
