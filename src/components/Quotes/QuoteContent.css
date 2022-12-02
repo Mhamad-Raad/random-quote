@@ -1,0 +1,74 @@
+.quote-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#text {
+  text-align: center;
+  color: #322b3a;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bolder;
+  opacity: 0;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
+}
+
+#author {
+  text-align: right;
+  color: #322b3a;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
+}
+
+.second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+#tweet-quote {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #322b3a;
+  transition: background-color 0.7s ease;
+}
+
+#new-quote {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #322b3a;
+  color: white;
+  transition: background-color 0.7s ease;
+  cursor: pointer;
+}
+
+#new-quote:hover, #tweet-quote:hover {
+  background-color: #29222c !important;
+}
+
+span {
+  color: #322b3a;
+  font-size: 20px;
+  transition: color 0.7s ease;
+  transition: opacity 0.35s ease;
+}

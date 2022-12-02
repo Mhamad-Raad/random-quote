@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+import QuoteContainer from "./components/Quotes/QuoteContainer";
+import PageAuthor from "./components/PageAuthor";
+import "./App.css";
 
 function App() {
+  const [quote, setQuote] = useState(null);
+
+  const fetchQuote = () => {
+    const link = "https://type.fit/api/quotes";
+    fetch(link)
+      .then((response) => response.json())
+      .then((data) => {
+        const index = Math.floor(Math.random() * data.length);
+        setQuote(data[index]);
+      });
+  };
+
+  useEffect(fetchQuote, []);
+
+  let color;
+
+  if (quote?.text.length % 2) {
+    color = "#574141";
+  } else if (quote?.text.length % 3) {
+    color = "#414257";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ background: color }}>
+      <QuoteContainer quote={quote} onChangeQuote={fetchQuote} color={color} />
+      <PageAuthor />
     </div>
   );
 }
 
 export default App;
+
