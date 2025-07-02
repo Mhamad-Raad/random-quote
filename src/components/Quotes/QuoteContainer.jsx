@@ -1,15 +1,15 @@
-import QuoteContent from "./QuoteContent";
-import "./QuoteContainer.css";
+import QuoteContent from './QuoteContent';
+import './QuoteContainer.css';
 
-export default function QuoteContainer(props) {
-  
+export default function QuoteContainer({ quote, onChangeQuote, color }) {
+  console.log('QuoteContainer', quote);
   return (
-    <div id="quote-box">
+    <div id='quote-box'>
       <QuoteContent
-        quote={props.quote?.text}
-        author={props.quote?.author}
-        onChangeQuote={props.onChangeQuote}
-        color={props.color}
+        quote={quote?.quote}
+        author={quote?.author}
+        onChangeQuote={onChangeQuote}
+        color={color}
       />
     </div>
   );

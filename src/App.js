@@ -1,34 +1,43 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import QuoteContainer from "./components/Quotes/QuoteContainer";
-import PageAuthor from "./components/PageAuthor";
-import "./App.css";
+import QuoteContainer from './components/Quotes/QuoteContainer';
+import PageAuthor from './components/PageAuthor';
+import './App.css';
 
 function App() {
+  const colors = [
+    '#574141',
+    '#414257',
+    '#417541',
+    '#714157',
+    '#41576A',
+    '#6A5741',
+    '#417174',
+  ];
+  let color = '';
   const [quote, setQuote] = useState(null);
 
   const fetchQuote = () => {
-    const link = "https://type.fit/api/quotes";
-    fetch(link)
+    const link = 'https://api.api-ninjas.com/v1/quotes';
+    fetch(link, {
+      method: 'GET',
+      headers: {
+        'X-Api-Key': '0NeEeIGn0v4y0D4S+jNPbA==l8YNseDTRqOcSdvm',
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
-        const index = Math.floor(Math.random() * data.length);
-        setQuote(data[index]);
+        setQuote(...data);
       });
   };
 
   useEffect(fetchQuote, []);
 
-  let color;
-
-  if (quote?.text.length % 2) {
-    color = "#574141";
-  } else if (quote?.text.length % 3) {
-    color = "#414257";
-  }
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  color = colors[randomIndex];
 
   return (
-    <div className="App" style={{ background: color }}>
+    <div className='App' style={{ background: color }}>
       <QuoteContainer quote={quote} onChangeQuote={fetchQuote} color={color} />
       <PageAuthor />
     </div>
@@ -36,4 +45,3 @@ function App() {
 }
 
 export default App;
-
