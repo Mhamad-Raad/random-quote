@@ -1,4 +1,5 @@
 # Random Quotes
+
 this wesite generates random quotes :).
 
 ## Built With
@@ -8,7 +9,8 @@ this wesite generates random quotes :).
 - React.js
 
 ### Deployment
-[Random-Quotes](https://grand-clafoutis-fe002e.netlify.app/)
+
+[Random-Quotes](https://random-quote-seven-tan.vercel.app/)
 
 👤 **Author1**
 
@@ -20,5 +22,5 @@ this wesite generates random quotes :).
 Contributions, issues, and feature requests are welcome!
 
 ## Show your support
-Give a ⭐️ if you like this project!
 
+Give a ⭐️ if you like this project!
